@@ -4,9 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace RESEntity
+namespace RESEntity 
 {
-    class Category
+    class Category : Entity
     {
+        public string CataegoryName { get; set; }
+        public string Description { get; set; }
     }
 }

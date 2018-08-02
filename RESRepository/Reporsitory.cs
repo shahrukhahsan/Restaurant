@@ -4,10 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace RESEntity
+namespace RESRepository
 {
-    public class Entity
+    class Reporsitory
     {
-        public int Id { get; set; }
     }
 }
