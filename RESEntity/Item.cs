@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace RESEntity
 {
-    class Item : Entity
+    public class Item : Entity
     {
         public string ItemName { get; set; }
         public double Price { get; set; }

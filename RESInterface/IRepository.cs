@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace RESInterface
 {
-    interface IRepository<TEntity> where TEntity : Entity
+    public interface IRepository<TEntity> where TEntity : Entity
     {
         List<TEntity> GetAll();
         TEntity Get(int id);
