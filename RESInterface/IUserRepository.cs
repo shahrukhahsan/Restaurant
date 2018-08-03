@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace RESInterface
 {
-    interface IUserRepository
+    public interface IUserRepository : IRepository<User>
     {
+        List<User> Search(string keyword);
     }
 }

@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace RESInterface
 {
-    interface IItemRepository
+    public interface IItemRepository : IRepository<Item>
     {
+        List<Item> GetItemsByCategory(int categoryId);
     }
 }

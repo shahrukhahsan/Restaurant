@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace RESInterface
 {
-    interface ICategoryRepository
+    public interface ICategoryRepository : IRepository<Category>
     {
+        List<Category> Search(string keyword);
     }
 }

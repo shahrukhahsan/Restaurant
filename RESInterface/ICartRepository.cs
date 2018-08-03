@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace RESInterface
 {
-    interface ICartRepository
+    public interface ICartRepository : IRepository<Cart>
     {
+        List<Cart> Search(string keyword);
     }
 }

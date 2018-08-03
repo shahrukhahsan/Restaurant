@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace RESInterface
 {
-    interface IAdminRepository
+    public interface IAdminRepository : IRepository<Admin>
     {
+        List<Admin> Search(string keyword);
     }
 }
