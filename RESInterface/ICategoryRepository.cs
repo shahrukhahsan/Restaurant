@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace RESInterface
 {
-    interface ICategoryRepository
+    public interface ICategoryRepository
     {
     }
 }
