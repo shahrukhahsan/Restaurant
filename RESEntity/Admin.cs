@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace RESEntity
 {
-    public class Admin
+    public class Admin : Entity
     {
         public int AdminId { get; set; }
         public string AdminName { get; set; }

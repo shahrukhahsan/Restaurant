@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace RESEntity
 {
-    public class Cart
+    public class Cart : Entity
     {
         public string ItemName { get; set; }
         public int UserId { get; set; }

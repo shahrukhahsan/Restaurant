@@ -10,7 +10,9 @@ namespace RESRepository
 {
     public class ItemRepository : Repository<Item>, IItemRepository
     {
-        public List<Item> GetProductsByCategory(int categoryId)
+       
+
+        public List<Item> GetItemsByCategory(int categoryId)
         {
             return Context.Items.Where(p => p.CategoryId == categoryId).ToList();
         }
