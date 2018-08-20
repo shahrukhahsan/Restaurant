@@ -12,9 +12,9 @@ namespace RESRepository
 {
     public class Repository<TEntity> : IRepository<TEntity> where TEntity : Entity
     {
-        private PMSDBContext context = new PMSDBContext();
+        private RESDBContext context = new RESDBContext();
 
-        public PMSDBContext Context
+        public RESDBContext Context
         {
             get { return this.context; }
         }

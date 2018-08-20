@@ -8,9 +8,11 @@ using System.Threading.Tasks;
 
 namespace RESData
 {
-    public class PMSDBContext : DbContext
+    public class RESDBContext : DbContext
     {
         public DbSet<Category> Categories { get; set; }
         public DbSet<Item> Items { get; set; }
+        public DbSet<Admin> Admins { get; set; }
+        public DbSet<User> Users { get; set; }
     }
 }

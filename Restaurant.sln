@@ -11,7 +11,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RESInterface", "RESInterfac
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RESRepository", "RESRepository\RESRepository.csproj", "{5B44B1C0-B7A5-4242-A322-D4CDE8DA2E33}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RESApp", "RESApp\RESApp.csproj", "{C0A2BA04-F81A-4FD7-9D9E-6D6E5B4D9298}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "REApp", "REApp\REApp.csproj", "{8FDBF62C-4D35-4C9C-9DAA-22DECC87A86C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -35,10 +35,10 @@ Global
 		{5B44B1C0-B7A5-4242-A322-D4CDE8DA2E33}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5B44B1C0-B7A5-4242-A322-D4CDE8DA2E33}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5B44B1C0-B7A5-4242-A322-D4CDE8DA2E33}.Release|Any CPU.Build.0 = Release|Any CPU
-		{C0A2BA04-F81A-4FD7-9D9E-6D6E5B4D9298}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C0A2BA04-F81A-4FD7-9D9E-6D6E5B4D9298}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C0A2BA04-F81A-4FD7-9D9E-6D6E5B4D9298}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C0A2BA04-F81A-4FD7-9D9E-6D6E5B4D9298}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8FDBF62C-4D35-4C9C-9DAA-22DECC87A86C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8FDBF62C-4D35-4C9C-9DAA-22DECC87A86C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8FDBF62C-4D35-4C9C-9DAA-22DECC87A86C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8FDBF62C-4D35-4C9C-9DAA-22DECC87A86C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
