@@ -19,6 +19,8 @@ namespace REApp
 
             container.RegisterType<ICategoryRepository, CategoryRepository>();
             container.RegisterType<IItemRepository, ItemRepository>();
+            container.RegisterType<IUserRepository, UserRepository>();
+            container.RegisterType<IAdminRepository, AdminRepository>();
 
             GlobalConfiguration.Configuration.DependencyResolver = new UnityDependencyResolver(container);
         }

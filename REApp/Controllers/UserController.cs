@@ -28,7 +28,7 @@ namespace REApp.Controllers
             return Ok(repo.GetAll());
         }
 
-        [Route("{id}", Name = "GerUser")]
+        [Route("{id}", Name = "GetUser")]
         public IHttpActionResult Get(int id)
         {
             User p = repo.Get(id);
