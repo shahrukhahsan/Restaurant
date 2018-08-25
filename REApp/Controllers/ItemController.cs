@@ -1,5 +1,4 @@
 ﻿using RESInterface;
-using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -19,6 +18,7 @@ namespace REApp.Controllers
         {
             this.repo = repo;
         }
+       
         [Route("")]
         public IHttpActionResult Get()
         {

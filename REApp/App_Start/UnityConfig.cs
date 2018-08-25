@@ -4,7 +4,7 @@ using Unity.WebApi;
 using RESInterface;
 using RESRepository;
 
-namespace PMSApp
+namespace REApp
 {
     public static class UnityConfig
     {
