@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="assets/bootstrap/css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="assets/bootstrap/css/bootstrap-theme.css">
+</head>
+<body ng-app="categoryModule">
+	
+	<nav class="navbar navbar-default">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<a class="navbar-brand" href="#">API Client</a>
+			</div>
+			<ul class="nav navbar-nav">
+				<li><a href="index.html">Home</a></li>
+				<li class="active"><a href="categories.html">Category</a></li>
+				<li><a href="products.html">Product</a></li>
+			</ul>
+		</div>
+	</nav>
+
+	<div class="container" ng-controller="categoryController">
+		
+		<div class="row">
+			<div class="col-md-6 col-md-offset-3">
+				
+				<div class="panel panel-info" ng-show="loginVisible">
+					<div class="panel-heading">Login</div>
+					<div class="panel-body">
+						<div class="form-group">
+							<label for="username">USERNAME</label>
+							<input type="text" ng-model="username">
+						</div>
+						<div class="form-group">
+							<label for="password">PASSWORD</label>
+							<input type="text" ng-model="password">
+						</div>
+						<button class="btn btn-primary" ng-click="login()">Login</button>
+					</div>
+				</div>
+
+				<div class="panel panel-info" ng-show="categoryVisible">
+					<div class="panel-heading">
+						Category List
+						<button class="btn btn-xs btn-primary pull-right"><i class="glyphicon glyphicon-plus"></i> Add New</button>
+						<button class="btn btn-xs btn-default pull-right" style="margin-right: 5px;"><i class="glyphicon glyphicon-refresh"></i> Refresh</button>
+					</div>
+					<div class="panel-body">
+						<table class="table table-striped">
+							<tr>
+								<th>ID</th>
+								<th>NAME</th>
+								<th>DESC</th>
+							</tr>
+							<tr ng-repeat="cat in catList">
+								<td>{{cat.id}}</td>
+								<td>{{cat.CataegoryName}}</td>
+								<td>{{cat.description}}</td>
+							</tr>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script type="text/javascript" src="assets/jquery/jquery-3.3.1.js"></script>
+	<script type="text/javascript" src="assets/bootstrap/js/bootstrap.js"></script>
+	<script type="text/javascript" src="assets/angular/angular.js"></script>
+	<script type="text/javascript" src="assets/scripts/category.js"></script>
+</body>
+</html>

@@ -1,4 +1,25 @@
-<html ng-app="myApp">
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="assets/bootstrap/css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="assets/bootstrap/css/bootstrap-theme.css">
+</head>
+<body ng-app="categoryModule">
+	
+	<nav class="navbar navbar-default">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<a class="navbar-brand" href="#">API Client</a>
+			</div>
+			<ul class="nav navbar-nav">
+				<li><a href="index.html">Home</a></li>
+				<li class="active"><a href="categories.html">Category</a></li>
+				<li><a href="itemview.html">Item</a></li>
+			</ul>
+		</div>
+	</nav>
+	<html ng-app="myApp">
 	<head>
 	<script src= "http://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js">
 	</script>		
@@ -17,7 +38,14 @@
 	<body ng-controller="myController">
 		Search : <input type="text" value="" ng-model="search" />
 		<table border=1>
+		<th<td></td>
+				<td>Category Id</td>
+				<td>Category Name</td>
+				<td>Description</td>
+				
+			</th>
 			<tr ng-repeat="data in myData | filter : search">
+			
 				<td>{{data.id}}</td>
 				<td>{{data.cataegoryName}}</td>
 				<td>{{data.description}}</td>
@@ -25,4 +53,10 @@
 			</tr>
 		</table>
 	</body>
+</html>
+<script type="text/javascript" src="assets/jquery/jquery-3.3.1.js"></script>
+	<script type="text/javascript" src="assets/bootstrap/js/bootstrap.js"></script>
+	<script type="text/javascript" src="assets/angular/angular.js"></script>
+	<script type="text/javascript" src="assets/scripts/category.js"></script>
+</body>
 </html>
