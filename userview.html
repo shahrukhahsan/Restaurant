@@ -14,23 +14,23 @@
 			</div>
 			<ul class="nav navbar-nav">
 				<li><a href="index.html">Home</a></li>
-				<li class="active"><a href="categories.html">Category</a></li>
+				<li><a href="categoryview.html">Category</a></li>
 				<li><a href="itemview.html">Item</a></li>
-				<li><a href="userview.html">User</a></li>
+				<li class="active"><a href="userview.html">User</a></li>
 				<li><a href="adminview.html">Admin</a></li>
 				
 				
 			</ul>
 		</div>
 	</nav>
-	<html ng-app="myApp">
+<html ng-app="myApp">
 	<head>
 	<script src= "http://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js">
 	</script>		
 	<script>
 	myApp=angular.module('myApp',[]);
 	myApp.controller('myController',function($scope,$http){
-		$http.get('http://localhost:50587/api/categories').success(function(response){
+		$http.get('http://localhost:50587/api/users').success(function(response){
 			$scope.myData = response;
 		});
 		$scope.removeName = function(row) {
@@ -40,33 +40,39 @@
 	</script>
 	</head>
 	<body ng-controller="myController">
-		Search : <input type="text" value="" ng-model="search" />
+	Search : <input type="text" value="" ng-model="search" />
 	<div class="panel panel-info" >
 		<div class="panel-heading">
-						Category List
+						User List
 						<button class="btn btn-xs btn-primary pull-right"><i class="glyphicon glyphicon-plus"></i> Add New</button>
 						<button class="btn btn-xs btn-default pull-right" style="margin-right: 5px;"><i class="glyphicon glyphicon-refresh"></i> Refresh</button>
 					</div>
 			
 		<div class="panel-body">
+		
 		<table border=1>
-		<th<td></td>
-				<td>Category Id</td>
-				<td>Category Name</td>
-				<td>Description</td>
+			<th<td></td>
+				<td>Id</td>
+				<td>User Id</td>
+				<td>User Name</td>
+				<td>Password</td>
+				<td>Address</td>
+				<td>Phone no.</td>
+				
 				
 			</th>
 			<tr ng-repeat="data in myData | filter : search">
-			
 				<td>{{data.id}}</td>
-				<td>{{data.cataegoryName}}</td>
-				<td>{{data.description}}</td>
+				<td>{{data.userId}}</td>
+				<td>{{data.userName}}</td>
+				<td>{{data.userPassword}}</td>
+				<td>{{data.address}}</td>
+				<td>{{data.phone}}</td>
 				<td><a href="" ng-click="removeName(data)">Remove</a></td>
 			</tr>
 		</table>
-		</div>
 	</div>
-
+	</div>
 	</body>
 </html>
 <script type="text/javascript" src="assets/jquery/jquery-3.3.1.js"></script>

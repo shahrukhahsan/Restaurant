@@ -1,3 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="assets/bootstrap/css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="assets/bootstrap/css/bootstrap-theme.css">
+</head>
+<body ng-app="categoryModule">
+	
+	<nav class="navbar navbar-default">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<a class="navbar-brand" href="#">FOOD HUT</a>
+			</div>
+			<ul class="nav navbar-nav">
+				<li><a href="index.html">Home</a></li>
+				<li><a href="categoryview.html">Category</a></li>
+				<li><a href="itemview.html">Item</a></li>
+				<li><a href="userview.html">User</a></li>
+				<li class="active"><a href="adminview.html">Admin</a></li>
+				
+			</ul>
+		</div>
+	</nav>
 <html ng-app="myApp">
 	<head>
 	<script src= "http://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js">
@@ -15,8 +39,24 @@
 	</script>
 	</head>
 	<body ng-controller="myController">
-		Search : <input type="text" value="" ng-model="search" />
+	Search : <input type="text" value="" ng-model="search" />
+	<div class="panel panel-info" >
+		<div class="panel-heading">
+						Admin List
+						<button class="btn btn-xs btn-primary pull-right"><i class="glyphicon glyphicon-plus"></i> Add New</button>
+						<button class="btn btn-xs btn-default pull-right" style="margin-right: 5px;"><i class="glyphicon glyphicon-refresh"></i> Refresh</button>
+					</div>
+			
+		<div class="panel-body">
+		
 		<table border=1>
+			<th<td></td>
+				<td>Admin Id</td>
+				<td>Admin Name</td>
+				<td>Phone no.</td>
+				
+				
+			</th>
 			<tr ng-repeat="data in myData | filter : search">
 				<td>{{data.adminId}}</td>
 				<td>{{data.adminName}}</td>
@@ -24,5 +64,13 @@
 				<td><a href="" ng-click="removeName(data)">Remove</a></td>
 			</tr>
 		</table>
+	</div>
+	</div>
 	</body>
+</html>
+<script type="text/javascript" src="assets/jquery/jquery-3.3.1.js"></script>
+	<script type="text/javascript" src="assets/bootstrap/js/bootstrap.js"></script>
+	<script type="text/javascript" src="assets/angular/angular.js"></script>
+	<script type="text/javascript" src="assets/scripts/category.js"></script>
+</body>
 </html>

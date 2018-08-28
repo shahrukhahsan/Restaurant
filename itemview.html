@@ -10,12 +10,14 @@
 	<nav class="navbar navbar-default">
 		<div class="container-fluid">
 			<div class="navbar-header">
-				<a class="navbar-brand" href="#">API Client</a>
+				<a class="navbar-brand" href="#">FOOD HUT</a>
 			</div>
 			<ul class="nav navbar-nav">
 				<li><a href="index.html">Home</a></li>
 				<li><a href="categoryview.html">Category</a></li>
 				<li class="active"><a href="itemview.html">Item</a></li>
+				<li><a href="userview.html">User</a></li>
+				<li><a href="adminview.html">Admin</a></li>
 				
 			</ul>
 		</div>
@@ -37,7 +39,16 @@
 	</script>
 	</head>
 	<body ng-controller="myController">
-		Search : <input type="text" value="" ng-model="search" />
+	Search : <input type="text" value="" ng-model="search" />
+	<div class="panel panel-info" >
+		<div class="panel-heading">
+						Item List
+						<button class="btn btn-xs btn-primary pull-right"><i class="glyphicon glyphicon-plus"></i> Add New</button>
+						<button class="btn btn-xs btn-default pull-right" style="margin-right: 5px;"><i class="glyphicon glyphicon-refresh"></i> Refresh</button>
+					</div>
+			
+		<div class="panel-body">
+		
 		<table border=1>
 			<th<td></td>
 				<td>Item Id</td>
@@ -56,6 +67,8 @@
 				<td><a href="" ng-click="removeName(data)">Remove</a></td>
 			</tr>
 		</table>
+		</div>
+	</div>
 	</body>
 </html>
 <script type="text/javascript" src="assets/jquery/jquery-3.3.1.js"></script>
