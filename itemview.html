@@ -1,0 +1,30 @@
+<html ng-app="myApp">
+	<head>
+	<script src= "http://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js">
+	</script>		
+	<script>
+	myApp=angular.module('myApp',[]);
+	myApp.controller('myController',function($scope,$http){
+		$http.get('http://localhost:50587/api/items').success(function(response){
+			$scope.myData = response;
+		});
+		$scope.removeName = function(row) {
+			$scope.myData.splice($scope.myData.indexOf(row),1);
+		}
+	});
+	</script>
+	</head>
+	<body ng-controller="myController">
+		Search : <input type="text" value="" ng-model="search" />
+		<table border=1>
+			<tr ng-repeat="data in myData | filter : search">
+				<td>{{data.id}}</td>
+				<td>{{data.itemName}}</td>
+				<td>{{data.price}}</td>
+				<td>{{data.quantity}}</td>
+				<td>{{data.categoryId}}</td>
+				<td><a href="" ng-click="removeName(data)">Remove</a></td>
+			</tr>
+		</table>
+	</body>
+</html>
