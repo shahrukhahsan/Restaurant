@@ -15,9 +15,10 @@
 			<ul class="nav navbar-nav">
 				<li><a href="index.html">Home</a></li>
 				<li><a href="categoryview.html">Category</a></li>
+				<li class="active"><a href="categoryinput.html">Category Input</a></li>
 				<li><a href="itemview.html">Item</a></li>
 				<li><a href="register.html">Register User</a></li>
-				<li class="active"><a href="adminview.html">Admin</a></li>
+				<li><a href="adminview.html">Admin</a></li>
 				
 			</ul>
 		</div>
@@ -27,44 +28,28 @@
 	<script src= "http://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js">
 	</script>		
 	<script>
-	myApp=angular.module('myApp',[]);
+	var myApp=angular.module('myApp',[]);
 	myApp.controller('myController',function($scope,$http){
-		$http.get('http://localhost:50587/api/admins').success(function(response){
-			$scope.myData = response;
-		});
-		$scope.removeName = function(row) {
-			$scope.myData.splice($scope.myData.indexOf(row),1);
+		$scope.addCategory = function(){
+		 $http.post('http://localhost:50587/api/categories', {
+		 		cataegoryName: $scope.name,
+		 		description: $scope.description		
+	}).then(function(response){
+		 	if(response.status == 201)
+		 	{
+		 		
+		 	}
+			else {alert('Not successful!');}
+			});
 		}
 	});
 	</script>
 	</head>
-	<body ng-controller="myController">
-	Search : <input type="text" value="" ng-model="search" />
-	<div class="panel panel-info" >
-		<div class="panel-heading">
-						Admin List
-						<button class="btn btn-xs btn-primary pull-right"><i class="glyphicon glyphicon-plus"></i> Add New</button>
-						<button class="btn btn-xs btn-default pull-right" style="margin-right: 5px;"><i class="glyphicon glyphicon-refresh"></i> Refresh</button>
-					</div>
-			
-		<div class="panel-body">
-		
-		<table border=1>
-			<th<td></td>
-				<td>Admin Id</td>
-				<td>Admin Name</td>
-				<td>Phone no.</td>
-				
-				
-			</th>
-			<tr ng-repeat="data in myData | filter : search">
-				<td>{{data.adminId}}</td>
-				<td>{{data.adminName}}</td>
-				<td>{{data.phone}}</td>
-				<td><a href="" ng-click="removeName(data)">Remove</a></td>
-			</tr>
-		</table>
-	</div>
+	<body ng-app="myApp">
+	<div ng-controller="myController"><br/>	
+		Category Name: <input type="text" ng-model="name" required><br/><br/>
+		Category Description: <input type="text" ng-model="description" required><br/><br/><br/>
+		<button onclick="location.href = 'categoryview.html';" class="btn btn-primary" ng-click="addCategory()">Add Category</button>
 	</div>
 	</body>
 </html>

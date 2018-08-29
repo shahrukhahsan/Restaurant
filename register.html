@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="assets/bootstrap/css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="assets/bootstrap/css/bootstrap-theme.css">
+</head>
+<body ng-app="categoryModule">
+	
+	<nav class="navbar navbar-default">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<a class="navbar-brand" href="#">FOOD HUT</a>
+			</div>
+			<ul class="nav navbar-nav">
+				<li><a href="index.html">Home</a></li>
+				<li><a href="categoryview.html">Category</a></li>
+				<li><a href="itemview.html">Item</a></li>
+				<li class="active"><a href="register.html">Register User</a></li>
+				<li><a href="adminview.html">Admin</a></li>
+				
+			</ul>
+		</div>
+	</nav>
+<html>
+    <head>
+    <title>Register</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0-beta.5/angular.min.js"></script>
+    <script>
+	var myApp=angular.module('myApp',[]);
+	myApp.controller('myController',function($scope,$http){
+		$scope.addUser = function(){
+		 $http.post('http://localhost:50587/api/users', {
+		 		userId: $scope.userId,
+		 		userName: $scope.userName,
+				userPassword: $scope.userPassword,
+		 		address: $scope.address,
+				phone: $scope.phone	
+	}).then(function(response){
+		 	if(response.status == 201)
+		 	{
+		 		
+		 	}
+			else {alert('Not successful!');}
+			});
+		}
+	});
+	</script>
+  </head>
+    <body ng-app="myApp">
+	<div ng-controller="myController"><br/>	
+    <h1>Register</h1>
+	
+	<input type="text" ng-model="userId" placeholder="user id" required><br><br>
+    <input type="text" ng-model="userName" placeholder="user name" required><br><br>
+    <input type="password" ng-model="userPassword" placeholder="password" required><br><br>
+	<input type="text" ng-model="address" placeholder="address" required><br><br>
+	<input type="text" ng-model="phone" placeholder="phone no." required><br><br>
+    <br>
+
+    <button onclick="location.href = 'userview.html';" class="btn btn-primary" ng-click="addUser()">Register</button>
+    
+    </div>
+	</body>
+
+    
+    
+</html>
