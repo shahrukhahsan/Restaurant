@@ -39,7 +39,8 @@
 	}).then(function(response){
 		 	if(response.status == 201)
 		 	{
-		 		
+		 		alert('successful!');
+				location.href = 'itemview.html';
 		 	}
 			else {alert('Not successful!');}
 			});
@@ -53,7 +54,8 @@
 		Item Price: <input type="text" ng-model="price" required><br/><br/>
 		Item Quantity: <input type="text" ng-model="quantity" required><br/><br/>
 		Item Category ID: <input type="text" ng-model="categoryId" required><br/><br/><br/>
-		<button onclick="location.href = 'itemview.html';" class="btn btn-primary" ng-click="addItem()">Add Item</button>
+		<button  class="btn btn-primary" ng-click="addItem()" >Add Item</button>
+		
 	</div>
 	</body>
 </html>

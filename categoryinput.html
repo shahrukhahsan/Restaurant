@@ -37,7 +37,8 @@
 	}).then(function(response){
 		 	if(response.status == 201)
 		 	{
-		 		
+		 		alert('successful!');
+				location.href = 'categoryview.html';
 		 	}
 			else {alert('Not successful!');}
 			});
@@ -49,7 +50,7 @@
 	<div ng-controller="myController"><br/>	
 		Category Name: <input type="text" ng-model="name" required><br/><br/>
 		Category Description: <input type="text" ng-model="description" required><br/><br/><br/>
-		<button onclick="location.href = 'categoryview.html';" class="btn btn-primary" ng-click="addCategory()">Add Category</button>
+		<button  class="btn btn-primary" ng-click="addCategory()">Add Category</button>
 	</div>
 	</body>
 </html>
